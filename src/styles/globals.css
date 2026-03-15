@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * ============================================
+ * SINGLE SOURCE FOR ALL THEME & UI COLORS
+ * ============================================
+ * Edit ONLY this file to change:
+ * - Page background, text, cards
+ * - Buttons (primary, outline, secondary, etc.)
+ * - Links, borders, inputs, focus rings
+ * - Navbar, footer, and all component colors
+ *
+ * Values are HSL (hue 0-360, saturation %, lightness %).
+ * Tailwind classes (bg-primary, text-primary, etc.) use these variables.
+ */
+@layer base {
+  :root {
+    /* Page & surfaces */
+    --background: 220 14% 98%;
+    --foreground: 221 64% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 221 64% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 221 64% 20%;
+    /* Primary (main buttons, links, nav active) – e.g. Deep Blue #1E3A8A */
+    --primary: 221 64% 34%;
+    --primary-foreground: 0 0% 100%;
+    /* Secondary (secondary buttons, muted areas) – e.g. Light Gray #F3F4F6 */
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 221 64% 20%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+    /* Accent (outline/ghost hover, highlights) – e.g. #F59E0B */
+    --accent: 38 92% 50%;
+    --accent-foreground: 221 64% 20%;
+    --destructive: 0 84% 60%;
+    /* Borders & inputs */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 221 64% 34%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 221 40% 8%;
+    --foreground: 220 14% 98%;
+    --card: 221 40% 11%;
+    --card-foreground: 220 14% 98%;
+    --primary: 38 92% 50%;
+    --primary-foreground: 221 64% 20%;
+    --secondary: 221 30% 18%;
+    --accent: 38 92% 50%;
+    --accent-foreground: 221 64% 20%;
+    --muted: 221 30% 18%;
+    --muted-foreground: 220 10% 65%;
+    --border: 221 25% 22%;
+    --input: 221 25% 22%;
+    --ring: 38 92% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}

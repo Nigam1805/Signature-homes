@@ -1,12 +1,18 @@
+import path from 'path'
+import { fileURLToPath } from 'url'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: ['class'],
   content: [
-    './index.html',
-    './src/**/*.{js,ts,jsx,tsx}',
+    path.join(__dirname, 'index.html'),
+    path.join(__dirname, 'src', '**', '*.{js,ts,jsx,tsx}'),
   ],
   theme: {
     extend: {
+      /* All theme colors come from src/styles/globals.css :root – do not add hardcoded colors here */
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
