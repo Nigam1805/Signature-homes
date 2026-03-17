@@ -62,10 +62,10 @@ export const LOGO_URL = '/logo/logo.png'
 export const HERO_CONTENT = {
   title: 'Building the Future with Strength and Precision',
   subtitle:
-    'We deliver reliable construction solutions for residential, commercial, and infrastructure projects.',
+    'We deliver reliable construction solutions for residential projects and custom build projects.',
   ctaPrimary: 'View Projects',
   ctaSecondary: 'Get a Quote',
-  backgroundImage: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80',
+  backgroundImage: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=80',
 } as const
 
 // --- SERVICES ---
@@ -84,7 +84,7 @@ export const SERVICES = [
     name: 'Huge range of selections',
     description:
       'Choose from an extensive range of materials, finishes, and fixtures to create your ideal space.',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    image: 'https://images.pexels.com/photos/14613134/pexels-photo-14613134.png?w=800&q=80',
     icon: 'layers',
   },
   {
@@ -141,10 +141,10 @@ export const PROJECTS = [
   },
   {
     id: '2',
-    name: 'Central Business Tower',
+    name: 'Premium Residential Apartments',
     location: 'Adelaide CBD',
-    description: 'Commercial high-rise with premium finishes and smart building systems.',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80',
+    description: 'Modern apartments designed for comfortable and stylish living, offering spacious layouts, quality construction, and convenient access to essential city amenities.',
+    image: 'https://plus.unsplash.com/premium_photo-1670275658703-33fb95fe50d8?w=800&q=80',
   },
   {
     id: '3',
@@ -169,10 +169,10 @@ export const PROJECTS = [
   },
   {
     id: '6',
-    name: 'Community Sports Complex',
+    name: 'Luxury Residential Villas',
     location: 'Mount Barker',
-    description: 'Community sports and recreation facility with indoor and outdoor facilities.',
-    image: 'https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=800&q=80',
+    description: 'Beautifully designed independent villas that provide privacy, space, and a premium lifestyle within a secure and peaceful residential environment.',
+    image: 'https://plus.unsplash.com/premium_photo-1764695672967-119262a30b54?w=800&q=80',
   },
 ] as const
 
@@ -182,7 +182,7 @@ export const GALLERY_ITEMS = [
   { src: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80', caption: '' },
   { src: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80', caption: '' },
   { src: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80', caption: '' },
-  { src: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80', caption: '' },
+  { src: 'https://plus.unsplash.com/premium_photo-1764695672967-119262a30b54?w=800&q=80', caption: '' },
   { src: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80', caption: '' },
   { src: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80', caption: '' },
   { src: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80', caption: '' },

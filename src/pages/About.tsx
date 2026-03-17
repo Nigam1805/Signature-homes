@@ -1,8 +1,7 @@
 import { motion } from 'motion/react'
 import { Card, CardContent } from '../components/ui/card'
-import { StatsSection } from '../components/StatsSection'
 import { Check } from 'lucide-react'
-import { ABOUT_CONTENT, STATS } from '../content/siteContent'
+import { ABOUT_CONTENT } from '../content/siteContent'
 
 export function About() {
   return (
@@ -99,9 +98,9 @@ export function About() {
         </motion.div>
 
         {/* Stats */}
-        <div className="mt-20">
-          <StatsSection stats={STATS} title="Our track record" />
-        </div>
+        {/* <div className="mt-20">
+          <StatsSection stats={STATS} title={HOME_SECTIONS.statsTitle} />
+        </div> */}
       </div>
     </div>
   )

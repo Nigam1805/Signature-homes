@@ -3,12 +3,10 @@ import { motion } from 'motion/react'
 import { HeroSection } from '../components/HeroSection'
 import { ServicesGrid } from '../components/ServicesGrid'
 import { ProjectGrid } from '../components/ProjectGrid'
-import { StatsSection } from '../components/StatsSection'
 import { Button } from '../components/ui/button'
 import {
   SERVICES,
   PROJECTS,
-  STATS,
   HOME_SECTIONS,
 } from '../content/siteContent'
 
@@ -36,7 +34,7 @@ export function Home() {
         </div>
       </section>
 
-      <StatsSection stats={STATS} title={HOME_SECTIONS.statsTitle} />
+      {/* <StatsSection stats={STATS} title={HOME_SECTIONS.statsTitle} /> */}
 
       <section className="container mx-auto max-w-6xl px-4 py-20 md:py-24">
         <motion.div

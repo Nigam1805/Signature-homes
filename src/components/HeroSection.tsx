@@ -1,10 +1,9 @@
 import { Link } from 'react-router-dom'
-import { motion } from 'motion/react'
+import { motion } from 'framer-motion'
 import { Button } from './ui/button'
 import { HERO_CONTENT } from '../content/siteContent'
 
 interface HeroSectionProps {
-  /** Optional override for background image URL */
   backgroundImage?: string
 }
 
@@ -12,42 +11,52 @@ export function HeroSection({ backgroundImage }: HeroSectionProps) {
   const image = backgroundImage ?? HERO_CONTENT.backgroundImage
 
   return (
-    <section className="relative min-h-[70vh] overflow-hidden">
+    <section className="relative min-h-[80vh] overflow-hidden">
+      {/* Background Image */}
       <div className="absolute inset-0">
-        <img
+        <motion.img
           src={image}
           alt="Construction"
-          className="h-full w-full object-cover object-top"
+          className="h-full w-full object-cover object-center"
+          initial={{ scale: 1.05 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 6 }}
         />
-        <div
-          className="absolute inset-0 bg-primary/80"
-          aria-hidden
-        />
+
+        {/* Gradient Overlay (Premium look) */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
       </div>
-      <div className="relative flex min-h-[70vh] flex-col justify-center px-4 py-16 md:py-24">
-        <div className="container mx-auto max-w-4xl">
+
+      {/* Content */}
+      <div className="relative flex min-h-[80vh] items-center px-6">
+        <div className="container mx-auto max-w-5xl">
+
+          {/* Title */}
           <motion.h1
-            className="text-4xl font-bold leading-tight text-white drop-shadow-md md:text-5xl lg:text-6xl"
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
+            className="max-w-2xl text-balance text-4xl font-semibold leading-tight text-white md:text-5xl lg:text-6xl" animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
             {HERO_CONTENT.title}
           </motion.h1>
+
+          {/* Subtitle */}
           <motion.p
-            className="mt-6 max-w-2xl text-lg text-white/95 md:text-xl"
+            className="mt-6 max-w-xl text-lg text-white/90 md:text-xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
           >
             {HERO_CONTENT.subtitle}
           </motion.p>
+
+          {/* Buttons */}
           <motion.div
             className="mt-10 flex flex-wrap gap-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
+            {/* Primary Button */}
             <Button
               size="lg"
               variant="default"
@@ -56,6 +65,8 @@ export function HeroSection({ backgroundImage }: HeroSectionProps) {
             >
               <Link to="/projects">{HERO_CONTENT.ctaPrimary}</Link>
             </Button>
+
+            {/* Secondary Button */}
             <Button
               size="lg"
               variant="outline"
